@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab Test</title>
+    <link rel="stylesheet" href="lab-test.css" />
+  </head>
+
+  <body>
+    <section id="outer-container">
+      <div id="image-container">
+        <img src="Images/Lab-Test/lab-test.jpg" />
+      </div>
+
+      <div id="form-container">
+        <form id="lab-test">
+          <h2>1. Your Contact Details</h2>
+
+          <label for="fname">
+            <input
+              type="text"
+              id="fname"
+              placeholder="Full Name"
+              title="Patient Name"
+              required
+            />
+          </label>
+          <label for="patientid">
+            <input
+              type="text"
+              id="patientid"
+              placeholder="Patient Id if exists"
+              title="Patient Id"
+              required
+            />
+          </label>
+          <label for="contactno">
+            <input
+              type="number"
+              id="contactno"
+              placeholder="Contact Number"
+              title="Contact No"
+              min="6000000000"
+              max="9999999999"
+              required
+            />
+          </label>
+          <label for="email">
+            <input
+              type="email"
+              id="email"
+              placeholder="Email id"
+              title="Email"
+              required
+            />
+          </label>
+
+          <h2>2. Address</h2>
+
+          <label for="house-no">
+            <input
+              type="number"
+              id="house-no"
+              placeholder="H-No"
+              title="H-No"
+              required
+            />
+          </label>
+
+          <label for="street-name">
+            <input
+              type="text"
+              id="street-name"
+              placeholder="Street"
+              title="Street Name"
+              required
+            />
+          </label>
+
+          <label for="area">
+            <input
+              type="text"
+              id="area"
+              placeholder="Area"
+              title="Area"
+              required
+            />
+          </label>
+
+          <h4>District</h4>
+          <select id="district" name="district" required>
+            <option value="">Choose</option>
+            <option value="Raipur">Raipur</option>
+            <option value="Durg">Durg</option>
+            <option value="Bilaspur">Bilaspur</option>
+            <option value="Raigarh">Raigarh</option>
+          </select>
+
+          <h2>3. Choose the Test Type</h2>
+          <p>(Choose atleaset one box without fail)</p>
+
+          <div class="checkbox-container">
+            <input
+              type="checkbox"
+              id="CBC"
+              name="test-type"
+              value="CBC"
+              required
+            />
+            <label for="CBC">CBC</label>
+          </div>
+
+          <div class="checkbox-container">
+            <input
+              type="checkbox"
+              id="complete-urine"
+              name="test-type"
+              value="complete-urine"
+            />
+            <label for="complete-urine">Complete Urine</label>
+          </div>
+
+          <div class="checkbox-container">
+            <input
+              type="checkbox"
+              id="lipid-profile"
+              name="test-type"
+              value="lipid-profile"
+            />
+            <label for="lipid-profile">Lipid Profile</label>
+          </div>
+
+          <div class="checkbox-container">
+            <input type="checkbox" id="tsh" name="test-type" value="tsh" />
+            <label for="tsh">Thyroid Stimulating Hormone(TSH)</label>
+          </div>
+
+          <div class="checkbox-container">
+            <input
+              type="checkbox"
+              id="glucose-test"
+              name="test-type"
+              value="glucose-test"
+            />
+            <label for="glucose-test">Glucose Test</label>
+          </div>
+
+          <h2>4. Do you want a hard copy of the report also?</h2>
+
+          <div class="radio-container">
+            <input
+              type="radio"
+              id="hardcopy-yes"
+              name="hardcopy"
+              value="true"
+              required
+            />
+            <label for="hardcopy-yes">Yes</label>
+          </div>
+          <div class="radio-container">
+            <input
+              type="radio"
+              id="hardcopy-no"
+              name="hardcopy"
+              value="false"
+            />
+            <label for="hardcopy-no">No</label>
+          </div>
+
+          <h2>5. Select your comfortable date and time</h2>
+
+          <input type="date" id="date" name="date" min="2023-12-13" required />
+          <input type="time" id="time" name="time" />
+        </form>
+      </div>
+    </section>
+
+    <div id="form-actions">
+      <button type="reset" form="lab-test" id="reset-button">Reset</button>
+      <button type="submit" form="lab-test" id="submit-button">Submit</button>
+    </div>
+  </body>
+</html>
